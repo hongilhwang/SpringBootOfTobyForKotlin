@@ -10,4 +10,11 @@ class HelloServiceTest : StringSpec({
         val ret = helloService.sayHello("Test")
         ret shouldBe "Hello Test"
     }
+
+    "helloDecorator" {
+        val decorator = HelloDecorator { name -> name }
+        val ret = decorator.sayHello("Test")
+
+        ret shouldBe "*Test*"
+    }
 })
