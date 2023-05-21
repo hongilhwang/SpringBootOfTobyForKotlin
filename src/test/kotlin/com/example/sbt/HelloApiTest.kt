@@ -16,7 +16,7 @@ class HelloApiTest : StringSpec(
             val res = rest.getForEntity("http://localhost:8080/hello?name={name}", String::class.java, "Spring")
             res.statusCode shouldBe HttpStatus.OK
             res.headers.getFirst(HttpHeaders.CONTENT_TYPE) shouldStartWith MediaType.TEXT_PLAIN_VALUE
-            res.body shouldBe "Hello Spring"
+            res.body shouldBe "*Hello Spring*"
         }
 
         "Hello api INTERNAL_SERVER_ERROR" {
