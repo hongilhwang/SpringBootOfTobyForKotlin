@@ -1,7 +1,6 @@
-package com.example.sbt
+package com.example.sbt.service
 
 import org.springframework.context.annotation.Primary
-import org.springframework.stereotype.Component
 import org.springframework.stereotype.Service
 
 
@@ -16,6 +15,6 @@ class SimpleHelloService : HelloService {
 
 @Service
 @Primary
-class HelloDecorator(val helloService: HelloService) : HelloService{
+class HelloDecorator(val helloService: HelloService) : HelloService {
     override fun sayHello(name: String): String = "*${helloService.sayHello(name)}*"
 }

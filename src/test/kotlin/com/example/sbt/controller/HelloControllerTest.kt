@@ -1,4 +1,4 @@
-package com.example.sbt
+package com.example.sbt.controller
 
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.StringSpec

@@ -1,5 +1,6 @@
-package com.example.sbt
+package com.example.sbt.controller
 
+import com.example.sbt.service.HelloService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 

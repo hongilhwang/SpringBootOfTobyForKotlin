@@ -1,4 +1,4 @@
-package com.example.sbt
+package com.example.sbt.service
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe

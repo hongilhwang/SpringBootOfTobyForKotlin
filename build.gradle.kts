@@ -22,6 +22,7 @@ dependencies {
     testImplementation("io.kotest:kotest-runner-junit5-jvm:4.6.0")
     compileOnly("javax.servlet:servlet-api:2.5")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("io.kotest:kotest-extensions-spring:4.4.3")
 }
 
 tasks.withType<KotlinCompile> {
