@@ -1,4 +1,4 @@
-package com.example.sbt
+package com.example.sbt.annotation
 
 import org.springframework.boot.web.server.WebServer
 import org.springframework.boot.web.servlet.ServletContextInitializer
