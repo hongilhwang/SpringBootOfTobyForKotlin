@@ -17,14 +17,14 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 class HelloApiTest @Autowired constructor(rest: TestRestTemplate) : StringSpec(
     {
         "Hello api" {
-            val res = rest.getForEntity("/hello?name={name}", String::class.java, "Spring")
+            val res = rest.getForEntity("http://localhost:9090/app/hello?name={name}", String::class.java, "Spring")
             res.statusCode shouldBe HttpStatus.OK
             res.headers.getFirst(HttpHeaders.CONTENT_TYPE) shouldStartWith MediaType.TEXT_PLAIN_VALUE
             res.body shouldBe "*Hello Spring*"
         }
 
         "Hello api INTERNAL_SERVER_ERROR" {
-            val res = rest.getForEntity("/hello?name=", String::class.java)
+            val res = rest.getForEntity("http://localhost:9090/app/hello?name=", String::class.java)
             res.statusCode shouldBe HttpStatus.INTERNAL_SERVER_ERROR
         }
     }
