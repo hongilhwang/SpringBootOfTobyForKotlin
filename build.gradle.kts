@@ -23,11 +23,14 @@ dependencies {
         //exclude("org.springframework.boot", "spring-boot-starter-tomcat")
     }
     //implementation("org.springframework.boot:spring-boot-starter-jetty")
+    implementation("com.h2database:h2")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.springframework:spring-jdbc")
     testImplementation("io.kotest:kotest-runner-junit5-jvm:4.6.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.kotest:kotest-extensions-spring:4.4.3")
+
 }
 
 tasks.withType<KotlinCompile> {
