@@ -13,4 +13,7 @@ class HelloController(private val helloService: HelloService) {
         return helloService.sayHello(name)
     }
 
+    @GetMapping("/count")
+    fun count(name: String): String = "name : ${name}, count : ${helloService.countOf(name)}"
+
 }
