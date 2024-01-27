@@ -1,11 +1,13 @@
 package com.example.sbt.repository
 
-import com.example.sbt.HelloBootTest
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
+import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.jdbc.core.JdbcTemplate
+import org.springframework.transaction.annotation.Transactional
 
-@HelloBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@Transactional
 class HelloRepositoryTest constructor(
     val jdbcTemplate: JdbcTemplate,
     val helloRepository: HelloRepository

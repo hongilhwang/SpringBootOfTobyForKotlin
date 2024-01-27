@@ -1,15 +1,10 @@
 package com.example.sbt.config
 
-import com.example.sbt.HelloApplication
-import com.example.sbt.HelloBootTest
 import io.kotest.core.spec.style.StringSpec
-import org.junit.jupiter.api.extension.ExtendWith
-import org.springframework.test.context.ContextConfiguration
-import org.springframework.test.context.TestPropertySource
-import org.springframework.test.context.junit.jupiter.SpringExtension
+import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest
 import javax.sql.DataSource
 
-@HelloBootTest
+@JdbcTest
 class DataSourceTest constructor(dataSource: DataSource) : StringSpec({
 
     "connect" {

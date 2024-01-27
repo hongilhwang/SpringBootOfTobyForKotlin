@@ -21,7 +21,12 @@ class HelloServiceTest : StringSpec({
     }
 
     "helloDecorator" {
-        val decorator = HelloDecorator { name -> name }
+        val decorator = HelloDecorator(object : HelloService {
+            override fun sayHello(name: String): String {
+                return name
+            }
+
+        })
         val ret = decorator.sayHello("Test")
 
         ret shouldBe "*Test*"

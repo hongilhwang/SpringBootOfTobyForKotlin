@@ -1,12 +1,11 @@
 package com.example.sbt.config
 
-import com.example.sbt.HelloBootTest
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
+import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest
 import org.springframework.jdbc.core.JdbcTemplate
-import org.springframework.jdbc.core.queryForObject
 
-@HelloBootTest
+@JdbcTest
 class JdbcTemplateTest constructor(val jdbcTemplate: JdbcTemplate) : StringSpec({
 
     beforeTest {
